@@ -1,0 +1,185 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Container principal centralizado e responsivo */
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+/* Banner superior */
+.top-banner {
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 16px 0;
+}
+
+/* Logo superior responsiva */
+.top-logo {
+    max-height: 90px;
+    max-width: 80vw;
+    height: auto;
+    width: auto;
+}
+
+/* Banner inferior */
+.bottom-banner {
+    min-height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 16px 0;
+}
+
+/* Container das logos inferiores */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Logos inferiores responsivas */
+.bottom-logo {
+    max-height: 70px;
+    max-width: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Centraliza botão na área principal */
+#capture-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 1px 4px rgba(76,175,80,0.08);
+    margin: 24px auto;
+    display: block;
+}
+
+#capture-btn:hover {
+    background-color: #45a049;
+}
+
+/* Área de resultado */
+#result-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Imagem capturada responsiva */
+#result-img {
+    max-width: 800px;
+    max-height: 600px;
+    width: 150%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+    background: #f5f5f5;
+    object-fit: contain;
+}
+
+/* Painel de status */
+#status-panel {
+    flex: 1;
+    min-width: 220px;
+}
+
+#defects-list {
+    margin-top: 16px;
+}
+
+.defect-item {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background: #e3f2fd;
+    color: #1565c0;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(21,101,192,0.07);
+}
+
+.defect-item.none {
+    background: #c8e6c9;
+    color: #388e3c;
+}
+
+/* Estilos para estados especiais da imagem */
+#result-img[alt="Processando imagem..."],
+#result-img[alt^="Erro:"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background-color: #f5f5f5;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+#result-img[alt^="Erro:"] {
+    color: #d32f2f;
+    border: 1px dashed #d32f2f;
+}
+
+/* Responsividade extra para telas menores */
+@media (max-width: 600px) {
+    #container {
+        max-width: 98vw;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .top-logo, .bottom-logo {
+        max-width: 90vw;
+        max-height: 50px;
+    }
+    .logo-container {
+        gap: 12px;
+    }
+    #result-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    #result-img {
+        max-width: 90vw;
+        max-height: 220px;
+    }
+    #capture-btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
