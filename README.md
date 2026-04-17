@@ -1,6 +1,6 @@
 # Sistema de Visão Combinado
 
-Este projeto combina dois sistemas de visão computacional: segmentação de imagens (originalmente para algodão) e classificação de imagens (originalmente para manga).
+Este projeto combina dois sistemas de visão computacional: segmentação de imagens e classificação de imagens.
 
 ## Estrutura do Projeto
 
@@ -45,8 +45,8 @@ Este projeto combina dois sistemas de visão computacional: segmentação de ima
 ## Funcionalidades
 
 - **Página Inicial**: Dois botões para escolher entre segmentação e classificação.
-- **Sistema de Segmentação**: Captura imagem, processa com modelo YOLO para detectar defeitos em objetos (ex: algodão).
-- **Sistema de Classificação**: Captura imagem, classifica com modelo YOLO (ex: manga boa/ruim).
+- **Sistema de Segmentação**: Captura imagem, processa com modelo YOLO para detectar defeitos em objetos.
+- **Sistema de Classificação**: Captura imagem, classifica com modelo YOLO.
 
 ## Adicionando Novos Sistemas
 
